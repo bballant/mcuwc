@@ -297,22 +297,22 @@ void setup(void) {
   // successfully communicating with the screen.
   tft.fillScreen(ST7735_BLUE);
 
-  // Load full-screen BMP file '001.bmp' at position (0,0) (top left).
-  // Notice the 'reader' object performs this, with 'tft' as an argument.
-  Serial.print(F("Loading parrot.bmp to screen..."));
-  stat = reader.drawBMP("/001.bmp", tft, 0, 0);
-  reader.printStatus(stat);   // How'd we do?
-
-  // Query the dimensions of image '001.bmp' WITHOUT loading to screen:
-  Serial.print(F("Querying 001.bmp image size..."));
-  stat = reader.bmpDimensions("/001.bmp", &width, &height);
-  reader.printStatus(stat);   // How'd we do?
-  if(stat == IMAGE_SUCCESS) { // If it worked, print image size...
-    Serial.print(F("Image dimensions: "));
-    Serial.print(width);
-    Serial.write('x');
-    Serial.println(height);
-  }
+//  // Load full-screen BMP file '001.bmp' at position (0,0) (top left).
+//  // Notice the 'reader' object performs this, with 'tft' as an argument.
+//  Serial.print(F("Loading parrot.bmp to screen..."));
+//  stat = reader.drawBMP("/001.bmp", tft, 0, 0);
+//  reader.printStatus(stat);   // How'd we do?
+//
+//  // Query the dimensions of image '001.bmp' WITHOUT loading to screen:
+//  Serial.print(F("Querying 001.bmp image size..."));
+//  stat = reader.bmpDimensions("/001.bmp", &width, &height);
+//  reader.printStatus(stat);   // How'd we do?
+//  if(stat == IMAGE_SUCCESS) { // If it worked, print image size...
+//    Serial.print(F("Image dimensions: "));
+//    Serial.print(width);
+//    Serial.write('x');
+//    Serial.println(height);
+//  }
 
   delay(2000); // Pause 2 seconds before moving on to loop()
 }
